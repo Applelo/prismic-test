@@ -1,0 +1,22 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $color-background;
+  width: 100%;
+
+  &__container {
+    max-width: rem-calc(1440);
+    padding: rem-calc(32);
+    margin: 0 auto;
+  }
+
+  a {
+    color: $color-content;
+    font-weight: 600;
+  }
+
+  a.router-link-active {
+    text-decoration: none;
+  }
+}

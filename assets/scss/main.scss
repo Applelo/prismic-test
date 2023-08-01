@@ -1,0 +1,12 @@
+@import 'common/mixins/all';
+@import 'normalize.css';
+@import 'common/variables';
+@import 'common/fonts';
+@import 'common/global';
+
+@import 'components/header.scss';
+
+// slices
+@import 'components/slices/hero.scss';
+@import 'components/slices/repeater.scss';
+@import 'components/slices/text.scss';

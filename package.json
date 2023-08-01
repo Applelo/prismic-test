@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "slicemachine": "start-slicemachine"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/prismic": "^3.0.1",
+    "@slicemachine/adapter-nuxt": "^0.3.8",
+    "@types/node": "^18.17.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^3.6.5",
+    "sass": "^1.64.1",
+    "slice-machine-ui": "^1.7.0"
+  }
+}

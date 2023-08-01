@@ -1,0 +1,38 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Hello world",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Officia dolor velit ipsum nulla est ut occaecat officia. Aute ut cillum quis ullamco ullamco ea nulla est. Irure est eiusmod sit consectetur irure fugiat velit eiusmod.",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Officia dolor velit ipsum nulla est ut occaecat officia. Aute ut cillum quis ullamco ullamco ea nulla est. Irure est eiusmod sit consectetur irure fugiat velit eiusmod.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

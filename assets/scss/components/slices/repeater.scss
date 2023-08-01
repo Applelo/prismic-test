@@ -1,0 +1,49 @@
+.repeater {
+  margin: rem-calc(48 0);
+
+  &__container {
+    max-width: rem-calc(1440);
+    padding: rem-calc(0 16);
+    margin: 0 auto;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem-calc(32);
+  }
+
+  &__item {
+    position: relative;
+
+    &-link {
+      text-decoration: none;
+      color: $color-main;
+    }
+
+    a::before {
+      position: absolute;
+      content: '';
+      inset: 0;
+      z-index: 2;
+    }
+
+    &-thumbnail {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 75%;
+    }
+
+    &-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+}

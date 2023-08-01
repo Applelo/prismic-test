@@ -1,0 +1,29 @@
+@use "sass:math";
+
+/**
+ * Add ellipsis
+ */
+ @mixin ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**
+ * Adobe Letter spacing calculation
+ */
+ @mixin letter-spacing($PhotoshopValue) {
+  letter-spacing: #{math.div($PhotoshopValue, 1000)}em;
+}
+
+/**
+ * Truncate multi-line
+ */
+@mixin truncate-lines($lines) {
+  // Multiline truncate
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

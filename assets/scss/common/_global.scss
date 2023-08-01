@@ -1,0 +1,49 @@
+/* ==========================================================================
+### Global styles
+========================================================================== */
+html {
+  scroll-behavior: smooth;
+
+  &.nav-open {
+    overflow: hidden;
+
+    body {
+      overflow: hidden;
+    }
+  }
+}
+
+// Custom default styling
+body {
+  // Optimize text rendering on all Browsers & OS
+  text-rendering: optimizeLegibility;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: $color-content;
+}
+
+.show-on-focus,
+.show-for-sr {
+  @include element-invisible;
+}
+
+.show-on-focus {
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+
+h1 {
+  font-size: rem-calc(54);
+  margin: 0;
+}
+
+
+h2 {
+  margin: 0;
+}

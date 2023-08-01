@@ -1,0 +1,9 @@
+.text {
+  margin: rem-calc(32 0);
+
+  &__container {
+    max-width: rem-calc(1440);
+    padding: rem-calc(0 16);
+    margin: 0 auto;
+  }
+}

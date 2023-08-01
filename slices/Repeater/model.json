@@ -1,0 +1,32 @@
+{
+  "id": "post_repeater",
+  "type": "SharedSlice",
+  "name": "Repeater",
+  "description": "PostRepeater",
+  "variations": [
+    {
+      "id": "projects",
+      "name": "Projects",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": { "label": "Title", "placeholder": "" }
+        }
+      },
+      "items": {
+        "post": {
+          "type": "Link",
+          "config": {
+            "label": "Post",
+            "select": "document",
+            "customtypes": ["project"]
+          }
+        }
+      }
+    }
+  ]
+}
