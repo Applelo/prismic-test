@@ -6,5 +6,5 @@ import { defineSliceZoneComponents } from "@prismicio/vue";
 export const components = defineSliceZoneComponents({
   hero: defineAsyncComponent(() => import("./Hero/index.vue")),
   post_repeater: defineAsyncComponent(() => import("./Repeater/index.vue")),
-  richtext: defineAsyncComponent(() => import("./Text/index.vue"))
+  richtext: defineAsyncComponent(() => import("./Text/index.vue")),
 });

@@ -1,3 +1,5 @@
+import { repositoryName } from './slicemachine.config.json'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
@@ -5,7 +7,7 @@ export default defineNuxtConfig({
 
   css: ['assets/scss/main.scss'],
   prismic: {
-    endpoint: "applelo",
+    endpoint: repositoryName,
     clientConfig: {
       routes: [
           {

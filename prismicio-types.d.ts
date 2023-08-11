@@ -367,48 +367,6 @@ export type RichtextSlice = prismic.SharedSlice<
   RichtextSliceVariation
 >;
 
-/**
- * Primary content in *Vivien → Primary*
- */
-export interface VivienSliceDefaultPrimary {
-  /**
-   * Vivid field in *Vivien → Primary*
-   *
-   * - **Field Type**: Color
-   * - **Placeholder**: *None*
-   * - **API ID Path**: vivien.primary.vivid
-   * - **Documentation**: https://prismic.io/docs/field#color
-   */
-  vivid: prismic.ColorField;
-}
-
-/**
- * Default variation for Vivien Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type VivienSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<VivienSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *Vivien*
- */
-type VivienSliceVariation = VivienSliceDefault;
-
-/**
- * Vivien Shared Slice
- *
- * - **API ID**: `vivien`
- * - **Description**: Vivien
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type VivienSlice = prismic.SharedSlice<"vivien", VivienSliceVariation>;
-
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -427,18 +385,20 @@ declare module "@prismicio/client" {
       ProjectDocumentDataSlicesSlice,
       AllDocumentTypes,
       HeroSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceHomePrimary,
       HeroSliceVariation,
       HeroSliceDefault,
       HeroSliceHome,
       PostRepeaterSlice,
+      PostRepeaterSliceProjectsPrimary,
+      PostRepeaterSliceProjectsItem,
       PostRepeaterSliceVariation,
       PostRepeaterSliceProjects,
       RichtextSlice,
+      RichtextSliceDefaultPrimary,
       RichtextSliceVariation,
       RichtextSliceDefault,
-      VivienSlice,
-      VivienSliceVariation,
-      VivienSliceDefault,
     };
   }
 }

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Content } from "@prismicio/client";
-import { ProjectDocument } from "prismicio-types";
+import { Content, isFilled } from "@prismicio/client";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -14,14 +13,9 @@ const props = defineProps(
 );
 
 const prismic = usePrismic();
-const items = props.slice.items
-
-
-// @ts-expect-error
-const postIds = props.slice.items.map(item => item.post.id)
-const { data: posts } = useAsyncData("posts", () =>
-  prismic.client.getAllByIDs<ProjectDocument>(postIds)
-);
+const posts = computed(() => {
+  return props.slice.items.filter(item => isFilled.contentRelationship(item.post)).map(item => item.post)
+})
 </script>
 
 <template>
@@ -33,7 +27,8 @@ const { data: posts } = useAsyncData("posts", () =>
       <ul class="repeater__list">
         <li v-for="post in posts">
           <article  class="repeater__item">
-            <header>
+            {{ post }}
+            <!-- <header>
               <h3 class="repeater__item-title">
                 <PrismicLink class="repeater__item-link" :field="post">
                 {{ post.data.title }}
@@ -42,7 +37,7 @@ const { data: posts } = useAsyncData("posts", () =>
             </header>
             <div class="repeater__item-thumbnail">
               <PrismicImage class="repeater__item-img" :field="post.data.thumbnail" />
-            </div>
+            </div> -->
           </article>
         </li>
       </ul>

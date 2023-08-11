@@ -11,7 +11,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: page.value?.data.meta_description,
+      content: page.value?.data.meta_description || '',
     },
   ],
 });
