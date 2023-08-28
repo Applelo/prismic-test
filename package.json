@@ -12,11 +12,11 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/prismic": "^3.0.1",
-    "@slicemachine/adapter-nuxt": "^0.3.10",
-    "@types/node": "^18.17.4",
+    "@slicemachine/adapter-nuxt": "^0.3.12",
+    "@types/node": "^18.17.12",
     "normalize.css": "^8.0.1",
-    "nuxt": "^3.6.5",
-    "sass": "^1.65.1",
-    "slice-machine-ui": "^1.8.0"
+    "nuxt": "^3.7.0",
+    "sass": "^1.66.1",
+    "slice-machine-ui": "^1.10.0"
   }
 }
