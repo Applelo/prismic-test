@@ -2,7 +2,7 @@
 import { components } from "~/slices";
 
 const {client} = usePrismic();
-const { data: page } = useAsyncData("[home]", () =>
+const { data: page } = await useAsyncData("[home]", () =>
   client.getSingle("home", {fetchLinks: 'post_repeater.post'})
 );
 

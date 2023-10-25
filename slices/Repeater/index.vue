@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import {type Content, isFilled } from "@prismicio/client";
-import type { ContentRelationshipField, FilledContentRelationshipField } from "@prismicio/types"
 import type { ProjectDocument } from "~/prismicio-types";
 
 // The array passed to `getSliceComponentProps` is purely optional.
