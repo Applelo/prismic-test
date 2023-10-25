@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { components } from "~/slices";
 
-const prismic = usePrismic();
+const {client} = usePrismic();
 const { data: page } = useAsyncData("[home]", () =>
-  prismic.client.getSingle("home")
+  client.getSingle("home", {fetchLinks: 'post_repeater.post'})
 );
 
 useHead({
